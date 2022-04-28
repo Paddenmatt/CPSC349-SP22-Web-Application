@@ -3,4 +3,5 @@ Final web application project which uses a REST API Server in combination with M
 
 ## Group Members:
 **Matthew Padden** - Paddenmatt@csu.fullerton.edu
-**Davina Doran:** - davdoran@csu.fullerton.edu 
+
+**Davina Doran** - davdoran@csu.fullerton.edu 
