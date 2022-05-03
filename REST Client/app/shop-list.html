@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shopping List</title>
+	<link href="shop-list.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+	<header>
+		<div class="top">
+			<ul class="nav-menu">
+				<li> <a href="http://localhost:4020/">Home</a></li>
+				<li> <a href="">About</a></li>
+				<li> <a href="">Discover</a></li>
+				<li> <a href="">Contact</a></li>
+			</ul>
+		</div>
+	</header>
+
+	<div class="tagline">
+		<p class="title">D&M School Shopping List</p>
+	</div>
+
+	<script class="items">
+		const xhr = new XMLHttpRequest()
+		xhr.open('GET', 'http://localhost:3000/api/shop')
+		xhr.responseType = 'json'
+		xhr.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				console.log(this.response)
+				const body = document.getElementsByTagName('body')[0]
+				for (const s of this.response) {
+					body.appendChild(document.createElement('br'))
+					body.appendChild(document.createElement('br'))
+					let c = document.createElement('label')
+					let txt = document.createTextNode(`Name: ${s.name}`)
+					c.appendChild(txt)
+					body.appendChild(c)
+
+					body.appendChild(document.createElement('br'))
+					c = document.createElement('label')
+					txt = document.createTextNode(`Type: ${s.type}`)
+					c.appendChild(txt)
+					body.appendChild(c)
+
+					body.appendChild(document.createElement('br'))
+					c = document.createElement('label')
+					txt = document.createTextNode(`Color: ${s.color}`)
+					c.appendChild(txt)
+					body.appendChild(c)
+
+					body.appendChild(document.createElement('br'))
+					c = document.createElement('label')
+					txt = document.createTextNode(`Qty: ${s.qty}`)
+					c.appendChild(txt)
+					body.appendChild(c)
+
+					body.appendChild(document.createElement('br'))
+					c = document.createElement('a')
+					c.href = s.link
+					c.text = 'Link to Item'
+					body.appendChild(c)
+				}
+			}
+		}
+		xhr.send()
+	</script>
+
+</body>
+</html>
