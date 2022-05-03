@@ -17,5 +17,5 @@ Please download and install the following packages by executing the following co
 
 ## How To Run:
 1. Navigate to `/REST Server` and execute `node index.js`.
-2. Navigate to `/REST Cliet` and execute `node index.js`.
+2. Navigate to `/REST Client` and execute `node index.js`.
 3. Open a new tab in your web browser and input `http://localhost:4020/` into the search bar.
