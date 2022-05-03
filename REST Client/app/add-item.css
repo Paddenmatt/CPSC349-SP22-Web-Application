@@ -51,12 +51,12 @@ h1 {
     margin-bottom: 50px;
 }
 
-.input {
+.input-box {
     color: rgb(0, 0, 0);
     font-size: 24px;
     font-family: Verdana, sans-serif;
-    text-align: left;
-    width: 400px;
+    text-align: right;
+    width: 500px;
     background-color: rgba(150, 150, 150, 0.3);
     padding: 10px;
     border: 3px solid black;
@@ -68,18 +68,42 @@ h1 {
 label {
     color: rgb(255, 255, 255);
     font-weight: bold;
+    text-align: left;
     -webkit-text-stroke: 1px rgb(100, 100, 100);
 }
 
 .button {
-font-size: 14px;
-margin-top: 15px;
-margin-left: 68%;    
-padding: 6px 6px;
+    font-size: 16px;
+    margin-top: 12px;
+    padding: 8px 8px;
 }
 
 .button2 {
-    font-size: 14px;
-    margin-top: 15px;
-    padding: 6px 6px;
+    font-size: 16px;
+    margin-top: 12px;
+    padding: 8px 8px;
     }
+
+.input-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 5px;
+}
+
+.label-item {
+    font-size: 24px;
+    flex-grow: 1;
+    flex-grow: 0;
+    flex-basis: 180px;
+    width: 200px;
+    
+}
+
+.input-item {
+    flex-grow: 1;
+    flex-basis: 300px;
+    height: 20px;
+}
+
