@@ -13,6 +13,7 @@ Please download and install the following packages by executing the following co
 2. `npm install --save-dev express`
 3. `npm install --save-dev mongodb`
 4. `npm install --save-dev npm`
+5. `npm install --save-dev cors`
 
 
 ## How To Run:
