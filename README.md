@@ -8,13 +8,8 @@ Final web application project which uses a REST API Server in combination with M
 
 ## Install Packages:
 **These files will not execute without the proper packages.
-Please download and install the following packages by executing the following commands inside the terminal of each folder.**
-1. `npm init`
-2. `npm install --save-dev express`
-3. `npm install --save-dev mongodb`
-4. `npm install --save-dev npm`
-5. `npm install --save-dev cors`
-
+Please download and install the required packages by executing the following command inside the terminal of each folder.**
+1. `npm i`
 
 ## How To Run:
 1. Navigate to `/REST Server` and execute `node index.js`.
