@@ -16,7 +16,7 @@ app.get('/api/shop', function(req, res){
 	if (Object.keys(req.query).length == 0) {
 		MongoClient.connect(url, function(err, db) {
 		  if (err) throw err;
-		  const dbo = db.db("test1");
+		  const dbo = db.db("D&M-Shop");
 		  dbo.collection("shop").find({}).toArray(function(err, result) {
 			if (err) throw err;
 			db.close()
@@ -30,10 +30,9 @@ app.get('/api/shop', function(req, res){
 
 // Adds Item to Shopping List
 app.post('/api/shop', function(req, res) {
-	console.log(req.body)
 	MongoClient.connect(url, function(err, conn) {
 	  if (err) throw err;
-	  var dbo = conn.db("test1");
+	  var dbo = conn.db("D&M-Shop");
 
 	  const myObj = new Object()
 	  myObj.name = req.body.name
@@ -51,6 +50,27 @@ app.post('/api/shop', function(req, res) {
 		  }
 	  })		
 	})
+})
+
+// Delete an Item
+app.put('/api/shop/:id', function(req, res){
+	const id = req.body.id
+	console.log(req.body.id)
+	const criteria = {_id : new mongo.ObjectID(req.params.id)}
+	const newValues = req.body
+	MongoClient.connect(url, function(err, conn) {
+		if (err) throw err;
+		const dbo = conn.db("D&M-Shop");
+		dbo.collection('shop').deleteOne({"_id": mongo.ObjectId(id)}, function(err, result){
+			if (err) console.log(err)
+			else {
+				//
+				res.type('application/json')
+				res.status(200)
+				res.json(result)
+			}
+		})
+  	})
 })
 
 app.listen(app.get('port'), function(){

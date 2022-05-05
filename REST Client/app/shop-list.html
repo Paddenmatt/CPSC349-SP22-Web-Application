@@ -26,6 +26,10 @@
 		<p class="title">D&M School Shopping List</p>
 	</div>
 
+	<div class="delete-item">
+		<a href='/delete.html' class="button">Delete Item</a>
+	</div>
+
 	<script class="items">
 		const xhr = new XMLHttpRequest()
 		xhr.open('GET', 'http://localhost:3000/api/shop')
@@ -39,6 +43,12 @@
 					body.appendChild(document.createElement('br'))
 					let c = document.createElement('label')
 					let txt = document.createTextNode(`Name: ${s.name}`)
+					c.appendChild(txt)
+					body.appendChild(c)
+
+					body.appendChild(document.createElement('br'))
+					c = document.createElement('label')
+					txt = document.createTextNode(`ID: ${s._id}`)
 					c.appendChild(txt)
 					body.appendChild(c)
 
@@ -70,6 +80,8 @@
 		}
 		xhr.send()
 	</script>
+
+
 
 </body>
 </html>
