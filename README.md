@@ -1,5 +1,5 @@
 # CPSC349-SP22-Web-Application
-Final web application project which uses a REST API Server in combination with MongoDB, JS, HTML and CSS.
+Final web application project which uses REST API in combination with MongoDB, JS, HTML and CSS.
 
 ## Group Members:
 **Matthew Padden** - Paddenmatt@csu.fullerton.edu
