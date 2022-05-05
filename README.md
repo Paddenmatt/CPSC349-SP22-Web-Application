@@ -10,10 +10,10 @@ Final web application project which uses a REST API Server in combination with M
 **These files will not execute without the proper packages.
 Please download and install the required packages by executing the following command inside the terminal of each folder.**
 
-**Execute:** `npm i` inside the `/REST Server` and `/REST Server` terminals
+**Execute:** `npm i` inside the `/REST Server` and `/REST Client` terminals
 
 
 ## How To Run:
 1. Navigate to `/REST Server` and execute `node index.js`.
-2. Navigate to `/REST Server` and execute `node index.js`.
+2. Navigate to `/REST Client` and execute `node index.js`.
 3. Open a new tab in your web browser and input `http://localhost:4020/` into the search bar.
