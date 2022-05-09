@@ -37,6 +37,7 @@ app.post('/api/shop', function(req, res) {
 	  const myObj = new Object()
 	  myObj.name = req.body.name
 	  myObj.type = req.body.type
+	  myObj.price = req.body.price
 	  myObj.color = req.body.color
 	  myObj.qty = req.body.qty
 	  myObj.link = req.body.link

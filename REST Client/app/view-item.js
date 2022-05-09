@@ -30,6 +30,12 @@ xhr.onreadystatechange = function() {
 
             body.appendChild(document.createElement('br'))
             c = document.createElement('label')
+            txt = document.createTextNode(`Price: ${s.price}`)
+            c.appendChild(txt)
+            body.appendChild(c)
+
+            body.appendChild(document.createElement('br'))
+            c = document.createElement('label')
             txt = document.createTextNode(`Color: ${s.color}`)
             c.appendChild(txt)
             body.appendChild(c)

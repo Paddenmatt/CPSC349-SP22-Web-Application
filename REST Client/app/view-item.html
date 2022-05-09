@@ -20,7 +20,7 @@
 		</header>
 
         <div class="tagline">
-            <p class="title">D&M School Shopping List</p>
+            <p class="title">Detailed Item View</p>
         </div>
 
         <script class="items">
@@ -50,6 +50,12 @@
                             body.appendChild(document.createElement('br'))
                             c = document.createElement('label')
                             txt = document.createTextNode(`Type: ${s.type}`)
+                            c.appendChild(txt)
+                            body.appendChild(c)
+
+                            body.appendChild(document.createElement('br'))
+                            c = document.createElement('label')
+                            txt = document.createTextNode(`Price: $${s.price}`)
                             c.appendChild(txt)
                             body.appendChild(c)
 
