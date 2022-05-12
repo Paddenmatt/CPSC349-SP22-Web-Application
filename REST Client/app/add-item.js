@@ -5,12 +5,12 @@ document.getElementById('create').addEventListener('click', function(event){
 	console.log('The Create button was clicked...')
 	
 	// 1. Retrieve user's inputs
-	const name = document.getElementById('name').value
-	const type = document.getElementById('type').value
+	const name  = document.getElementById('name').value
+	const type  = document.getElementById('type').value
 	const price = document.getElementById('price').value
 	const color = document.getElementById('color').value
-	const qty = document.getElementById('qty').value
-	const link = document.getElementById('link').value
+	const qty   = document.getElementById('qty').value
+	const link  = document.getElementById('link').value
 
 	// 2. Prepare and send REST request
 	console.log('Sending REST request to save object ...')
